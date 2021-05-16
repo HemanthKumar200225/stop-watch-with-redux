@@ -4,7 +4,8 @@ import * as actions from '../Actions/ActionTypes'
 
 const mapStateToProps = state => {
   return {
-    count: state
+    time: state
+    // lap: [...state.lap],
   };
 };
 const mapDispatchToProps = dispatch => {
@@ -12,7 +13,7 @@ const mapDispatchToProps = dispatch => {
     handleStartClick: () => dispatch({ type: actions.START }),
     handleStopClick: () => dispatch({ type: actions.STOP }),
     handleLapClick: () => dispatch({ type: actions.LAP }),
-    handleRestClick: () => dispatch({ type: actions.RESET }),
+    handleResetClick: () => dispatch({ type: actions.RESET }),
   }
 };
-export const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+export const Timer = connect(mapStateToProps, mapDispatchToProps)(Component);

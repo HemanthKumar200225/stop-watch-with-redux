@@ -1,12 +1,16 @@
 import * as actions from './Actions/ActionTypes';
 
-function TimeReducer( state=[], action)
+function TimeReducer( state = 0 , action)
 {
     switch(action.type){
         case actions.START:
-            return [
-                ...state,
-            ];
+            return state + 1;
+        case actions.STOP:
+            return state - 1;
+        // case actions.LAP:
+        //     return state - 1;
+        case actions.RESET:
+            return state = 0;
         default:
             return state;
     }
