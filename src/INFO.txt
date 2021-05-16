@@ -1,0 +1,8 @@
+Actions : -
+    Start
+    Lap
+    Stop
+    Reset
+Store : -
+    Time
+    Lap_list
